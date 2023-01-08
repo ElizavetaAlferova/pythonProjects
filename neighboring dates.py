@@ -17,3 +17,4 @@ for i in range(len(list_dates)-1):
 
 
 print(diff_neighbor)
+print(list_dates)
