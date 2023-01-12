@@ -1,5 +1,5 @@
 from datetime import datetime
-
+# change
 pattern = '%d.%m.%Y'
 n = int(input())
 list_of_customers = []
