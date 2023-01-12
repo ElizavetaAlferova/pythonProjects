@@ -8,13 +8,13 @@
 '''
 
 from datetime import datetime, timedelta, date
-sample='%d.%m.%Y'
-diff_neighbor=[]
 
-list_dates=[datetime.strptime(i, sample) for i in input().split()]
-for i in range(len(list_dates)-1):
-    diff_neighbor.append(abs(list_dates[i]-list_dates[i+1]).days)
+sample = '%d.%m.%Y'
+diff_neighbor = []
 
+list_dates = [datetime.strptime(i, sample) for i in input().split()]
+for i in range(len(list_dates) - 1):
+    diff_neighbor.append(abs(list_dates[i] - list_dates[i + 1]).days)
 
 print(diff_neighbor)
 print(list_dates)

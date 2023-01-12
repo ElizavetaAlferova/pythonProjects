@@ -21,20 +21,16 @@
 """
 from datetime import datetime, timedelta
 
-pattern='%H:%M'
-start_time=datetime.strptime(input(), pattern)
+pattern = '%H:%M'
+start_time = datetime.strptime(input(), pattern)
 end_time = datetime.strptime(input(), pattern)
 
-schedule=[]
-while end_time>=start_time:
-    if start_time+timedelta(minutes=45)<=end_time:
+schedule = []
+while end_time >= start_time:
+    if start_time + timedelta(minutes=45) <= end_time:
 
         print(datetime.strftime(start_time, pattern), end=' - ')
-        print(datetime.strftime(start_time+timedelta(minutes=45), pattern))
-        start_time=start_time+timedelta(minutes=55)
+        print(datetime.strftime(start_time + timedelta(minutes=45), pattern))
+        start_time = start_time + timedelta(minutes=55)
     else:
         break
-
-
-
-

@@ -1,7 +1,7 @@
 from datetime import datetime, date, timedelta
 
-pattern='%d.%m.%Y'
-start_date=datetime.strptime(input(), pattern)
+pattern = '%d.%m.%Y'
+start_date = datetime.strptime(input(), pattern)
 end_date = datetime.strptime(input(), pattern)
 
 """
@@ -11,15 +11,12 @@ end_date = datetime.strptime(input(), pattern)
 """
 f = True
 while f:
-    if (start_date.day+start_date.month)%2!=0:
+    if (start_date.day + start_date.month) % 2 != 0:
         first_date = start_date
         f = False
     else:
-        start_date+=timedelta(days=1)
-while first_date<=end_date:
+        start_date += timedelta(days=1)
+while first_date <= end_date:
     if first_date.weekday() not in [0, 3]:
         print(datetime.strftime(first_date, pattern))
-    first_date+=timedelta(days=3)
-
-
-
+    first_date += timedelta(days=3)

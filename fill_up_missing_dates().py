@@ -14,17 +14,19 @@ dates = ['01.11.2021', '07.11.2021', '04.11.2021', '03.11.2021']
 
 from datetime import datetime, timedelta
 
+
 def Fill_up(dates):
     '''I write comment'''
-    sample='%d.%m.%Y'
+    sample = '%d.%m.%Y'
     dates = list(map(lambda x: datetime.strptime(x, sample), dates))
-    max_date=max(dates)
+    max_date = max(dates)
     min_date = min(dates)
     blank_list = []
-    while min_date<=max_date:
+    while min_date <= max_date:
         blank_list.append(datetime.strftime(min_date.date(), sample))
-        min_date = min_date+timedelta(days=1)
+        min_date = min_date + timedelta(days=1)
     return blank_list
+
 
 d = ['01.11.2021', '07.11.2021', '04.11.2021', '03.11.2021']
 print(Fill_up(d))
