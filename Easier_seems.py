@@ -21,7 +21,7 @@ def condense_csv(filename, id_name):
                     finish.append(data)
                     # print(data)
                     data=[]
-        # print(finish)
+        print(finish)
         writer.writerow(headers)
         writer.writerows(finish)
 

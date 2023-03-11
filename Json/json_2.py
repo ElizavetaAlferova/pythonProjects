@@ -9,5 +9,5 @@ club2 = {"name": "FC Barcelona", "country": "Spain", "founded": 1899,
 club3 = {"name": "FC Manchester United", "country": "England", "founded": 1878,
          "trainer": "Michael Carrick", "gaolkeeper": "D. De Gea", "league_position": 8}
 sp=[club1, club2, club3]
-with open("data.json", 'w', encoding="utf8") as json_file:
+with open("../data1.json", 'w', encoding="utf8") as json_file:
     json.dump(sp,json_file, indent=3)
